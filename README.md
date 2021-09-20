@@ -189,3 +189,52 @@ Javascript 함수 문법에 맞는 입력을 하다보니, 위와같이 복잡�
 
 
 ##### 02
+## 02. JSX 환경설정 - babel
+
+JSX를 사용하기 위해서는 Babel 설정이 필요 합니다. (Vue CLI 프로젝트 한정 정리)
+
+<br/>
+
+필요한 페키지는 다음과 같습니다.
+
+| 참조문서: https://github.com/yamoo9/Vue-CAMP/blob/master/Document/vue-jsx.md
+
+* babel-plugin-syntax-jsx
+* babel-plugin-transform-vue-jsx
+* babel-helper-vue-jsx-merge-props
+* babel-preset-env
+
+<br/>
+
+```bash
+npm i -D babel-plugin-syntax-jsx babel-plugin-transform-vue-jsx babel-helper-vue-jsx-merge-props babel-preset-env
+```
+
+<br/>
+
+설치가 완료되면 ``babel.config.js`` 에 다음과 같이 설정합니다.
+
+```javascript
+// 경로: <rootDir>/babel.config.js
+
+module.exports = {
+  presets: ["@babel/preset-env"],
+  plugins: ["transform-vue-jsx"],
+}
+```
+
+<br/>
+
+설정을 한 후, ``npm run serve`` 로 실행하였을 때, 정상적으로 실행 된다면, 설정이 완료 된 상태 입니다.
+
+
+
+<br/>
+
+[🔺 Top](#top)
+
+<hr/><br/>
+
+
+
+##### 03
