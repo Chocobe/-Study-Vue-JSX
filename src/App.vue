@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <!-- <my-component /> -->
+    <!-- <my-render /> -->
+    <my-complex-render />
   </div>
 </template>
+
+<script>
+// import MyComponent from "@/components/MyComponent.vue";
+// import MyRender from "@/components/MyRender.vue";
+import MyComplexRender from "@/components/MyComplexRender.vue";
+
+export default {
+  components: {
+    // MyComponent,
+    // MyRender,
+    MyComplexRender,
+  },
+};
+</script>
 
 <style>
 #app {
