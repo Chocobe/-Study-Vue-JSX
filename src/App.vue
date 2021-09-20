@@ -2,20 +2,26 @@
   <div id="app">
     <!-- <my-component /> -->
     <!-- <my-render /> -->
-    <my-complex-render />
+    <!-- <my-complex-render /> -->
+    <!-- <my-jsx /> -->
+    <my-complex-jsx />
   </div>
 </template>
 
 <script>
 // import MyComponent from "@/components/MyComponent.vue";
 // import MyRender from "@/components/MyRender.vue";
-import MyComplexRender from "@/components/MyComplexRender.vue";
+// import MyComplexRender from "@/components/MyComplexRender.vue";
+// import MyJsx from "@/components/MyJsx.vue";
+import MyComplexJsx from "@/components/MyComplexJsx.vue";
 
 export default {
   components: {
     // MyComponent,
     // MyRender,
-    MyComplexRender,
+    // MyComplexRender,
+    // MyJsx,
+    MyComplexJsx,
   },
 };
 </script>

@@ -5,6 +5,8 @@
 
 * [02. JSX 환경설정 - babel](#02)
 
+* [03. 첫번째 JSX 컴포넌트](#03)
+
 
 
 <br/><hr/><br/>
@@ -88,6 +90,7 @@ render(h) 를 사용해도 동일한 결과가 나옵니다.
 
 ```html
 <!-- 경로: "@/components/MyComplexJsx.vue" -->
+
 <script>
 export default {
   data: () => ({
@@ -238,3 +241,97 @@ module.exports = {
 
 
 ##### 03
+## 03. 첫번째 JSX 컴포넌트
+
+JSX 를 사용하면, render(h) 메서드의 ``h`` 또는 ``createElement()`` 를 사용하지 않고, ``<template>`` 과 유사한 형식으로 코드를 작성할 수 있습니다.
+
+아래 코드는 JSX 를 사용한 render() 메서드 구현 입니다.
+
+```html
+<!-- 경로: "@/components/MyJSX.vue" -->
+
+<script>
+export default {
+  data: () => ({
+    msg: "첫번째 JSX 컴포넌트 입니다.",
+  }),
+
+  render() {
+    return <div class="my-jsx">{this.msg}</div>;
+  },
+};
+</script>
+
+<style scoped>
+.my-jsx {
+  color: #ff1493;
+}
+</style>
+```
+
+<br/>
+
+<img src="./readmeAssets/03-JSX-01.png" width="700px"><br/>
+
+<br/>
+
+위 코드의 render() 메서드가 마치 ``<template>`` 코드처럼 작성한 것을 알 수 있습니다.
+
+이처럼 JSX 를 사용하면, 기존의 render(h) 메서드의 callback 함수인 h 또는 createElement 를 사용하지 않고, ``<template>`` 처럼 작성할 수 있는 장점이 있습니다.
+
+<br/>
+
+이번에는 좀 더 복잡한 ``<template>`` 을 가진 컴포넌트를 작성해 보겠습니다.
+
+```html
+<!-- 경로: "@/components/MyComplexJsx.vue" -->
+
+<script>
+export default {
+  data: () => ({
+    title: "My Complex Jsx 입니다.",
+    contents: "컨텐츠 입니다.",
+    buttonName: "My버튼",
+  }),
+
+  render() {
+    return (
+      <div>
+        <h1 class="my-complex-title">{this.title}</h1>
+        <p class="my-complex-contents">{this.contents}</p>
+        <button class="my-complex-button">{this.buttonName}</button>
+      </div>
+    );
+  },
+};
+</script>
+
+<style scoped>
+.my-complex-title {
+  color: #ff1493;
+}
+
+.my-complex-contents {
+  color: #03a9f4;
+}
+
+.my-complex-button {
+  color: #2b51b9;
+  font-weight: 900;
+}
+</style>
+```
+
+<img src="./readmeAssets/03-JSX-02.png" width="700px"><br/>
+
+<br/>
+
+이상 JSX 정리를 마무리 하겠습니다.
+
+
+
+<br/>
+
+[🔺 Top](#top)
+
+<hr/><br/>
